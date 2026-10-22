@@ -32,6 +32,16 @@ A production-grade, end-to-end GitOps and DevSecOps pipeline implemented nativel
         └── Deploys pod in `dev-environment` with zero-trust SecurityContext
 
 ```
+---
+
+## 🧪 Testing & Validation
+
+This pipeline includes strict security gating and self-healing validation. We performed intentional failure testing (Chaos Engineering) to verify:
+* **Gitleaks** blocks commits containing exposed secrets.
+* **Trivy** blocks deployments of container images with `CRITICAL` or `HIGH` vulnerabilities.
+* **ArgoCD** automatically detects manual cluster drift and self-heals the state.
+
+👉 **View the full testing methodology and failure proofs in [TESTING.md](./TESTING.md)**.
 
 ---
 
@@ -78,9 +88,9 @@ gitops-devsecops-k8s/
 │   └── overlays/
 │       └── dev/                 # Environment-specific Kustomize overlays
 │           └── kustomization.yaml
-└── scripts/
-    └── bootstrap-k3s.sh         # Automated k3s cluster setup script
-
+├── scripts/
+│   └── bootstrap-k3s.sh         # Automated k3s cluster setup script
+└── TESTING.md                   # 🧪 Security gating & intentional failure tests
 ```
 
 ---
