@@ -1,0 +1,13 @@
+{
+  "name": "telemetry-backend",
+  "version": "1.0.0",
+  "description": "Sample API for GitOps deployment",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "prom-client": "^15.0.0"
+  }
+}

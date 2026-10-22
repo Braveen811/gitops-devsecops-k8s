@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telemetry-backend
+  labels:
+    app: telemetry-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telemetry-backend
+  template:
+    metadata:
+      labels:
+        app: telemetry-backend
+    spec:
+      containers:
+      - name: app
+        image: ghcr.io/braveen811/telemetry-backend:latest
+        ports:
+        - containerPort: 3000
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+              - ALL
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
