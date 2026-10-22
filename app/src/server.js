@@ -8,7 +8,7 @@ const collectDefaultMetrics = client.collectDefaultMetrics;
 collectDefaultMetrics({ register: client.register });
 
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'healthy', timestamp: new Date() });
+  res.status(200).json({ status: 'Super healthy! Arch Linux K3s is awesome.', timestamp: new Date() });
 });
 
 app.get('/metrics', async (req, res) => {
