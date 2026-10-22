@@ -188,6 +188,10 @@ kubectl describe pod <pod-name> -n dev-environment | tail -n 15
 
 ---
 
+**Author:** [Braveen R](https://braveenr.linklee.in/))</br>
+
+---
+
 ## ✌️ Wrapping Up
 
 This project bridges local Arch Linux kernel performance with modern cloud-native GitOps delivery:
@@ -196,9 +200,8 @@ This project bridges local Arch Linux kernel performance with modern cloud-nativ
 * **Self-Healing Declarative State:** ArgoCD continuously monitors repository manifests and maintains cluster convergence without manual `kubectl` intervention.
 * **Production-Hardened Pods:** Zero-privilege execution environment blocking root compromises and filesystem writes out of the box.
 
----
+See you in the terminal!
 
-**Author:** [Braveen R](https://braveenr.linklee.in/))</br>
-EOF
 
----
+
+
