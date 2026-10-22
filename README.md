@@ -198,7 +198,7 @@ kubectl describe pod <pod-name> -n dev-environment | tail -n 15
 
 ---
 
-**Author:** [Braveen R](https://braveenr.linklee.in/))</br>
+**Author:** [Braveen R](https://braveenr.linklee.in/)</br>
 
 ---
 
