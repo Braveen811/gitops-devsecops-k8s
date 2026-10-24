@@ -1,4 +1,3 @@
-```markdown
 ## Automated GitOps & DevSecOps Delivery Pipeline on K3s
 
 ![CI/CD Pipeline](https://github.com/Braveen811/gitops-devsecops-k8s/actions/workflows/ci.yml/badge.svg)
